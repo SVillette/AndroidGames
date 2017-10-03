@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="go">Go</string>
+    <string name="clicked">clicked</string>
+    <string name="authenticated">Authenticated</string>
+    <string name="non_authenticated">Non authenticated</string>
+    <string name="checkers">Checkers</string>
+    <string name="sudoku">Sudoku</string>
+    <string name="power4">Power 4</string>
+    <string name="horses">Horses</string>
+    <string name="naval_war">Naval war</string>
+    <string name="chess">Echecs</string>
+</resources>

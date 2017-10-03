@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="go">Go</string>
+    <string name="clicked">Cliqué</string>
+    <string name="authenticated">Authentifié</string>
+    <string name="non_authenticated">Combinaison login / mot de passe incorrecte</string>
+    <string name="checkers">Jeu de dames</string>
+    <string name="sudoku">Sudoku</string>
+    <string name="power4">Puissance 4</string>
+    <string name="horses">4 chevaux</string>
+    <string name="naval_war">Bataille navale</string>
+    <string name="chess">Echecs</string>
+</resources>
