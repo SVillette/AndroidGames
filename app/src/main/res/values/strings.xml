@@ -34,4 +34,15 @@
     <string name="phone">Téléphone</string>
     <string name="phone_empty_error">Le numéro est vide</string>
     <string name="contact_added">Le contact a été ajouté</string>
+    <string name="photo">Photo</string>
+    <string name="camera_permission_denied">Vous n\'avez pas donné la permission à la caméra</string>
+    <string name="camera_permission_granted">Vous pouvez maintenant utiliser la caméra</string>
+    <string name="should_autorize_photo">Pour utiliser la caméra vous devez donner à l\'application la permission via la pop up suivante ou vous rendre dans les paramètres</string>
+    <string name="ok">Ok</string>
+    <string name="autorize_photo_title">Autoriser l\'appareil photo</string>
+    <string name="storage_permission_granted">L\'application peut maintenant enregistrer des photos</string>
+    <string name="storage_permission_denied">L\'application ne peut pas enregistrer de photos</string>
+    <string name="no_camera">Votre appareil n\'a pas de caméra</string>
+    <string name="picture_taken">La photo a bien été prise</string>
+    <string name="picture_not_taken">La photo n\'a pas été prise</string>
 </resources>

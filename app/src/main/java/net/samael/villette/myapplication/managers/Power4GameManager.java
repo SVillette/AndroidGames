@@ -146,7 +146,7 @@ public class Power4GameManager
         return -1;
     }
 
-    public void play(int column)
+    public ImageView[] play(int column)
     {
         P4Player player = this.getPlayerTurn();
         int line = this.getLinePlayable(column);
@@ -160,6 +160,7 @@ public class Power4GameManager
             }*/
             this.setPlayerTurn();
         }
+        return new ImageView[] {imageViews[column][0], imageViews[column][line]};
     }
 
     public boolean isFinished(P4Case lastPawn)

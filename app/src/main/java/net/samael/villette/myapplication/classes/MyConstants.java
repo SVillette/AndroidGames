@@ -11,6 +11,7 @@ import net.samael.villette.myapplication.activities.games.ChessActivity;
 import net.samael.villette.myapplication.activities.games.HorsesActivity;
 import net.samael.villette.myapplication.activities.games.Power4Activity;
 import net.samael.villette.myapplication.activities.games.SudokuActivity;
+import net.samael.villette.myapplication.activities.photos.PhotoActivity;
 import net.samael.villette.myapplication.models.Game;
 import net.samael.villette.myapplication.models.MenuItem;
 import net.samael.villette.myapplication.models.Power4.Power4;
@@ -34,6 +35,9 @@ public class MyConstants
 
     public final static int P4_NB_COLUMNS = 7;
     public final static int P4_NB_LINES = 6;
+    public static final int CAMERA_PERMISSION_REQUEST_CODE = 789;
+    public static final int STORAGE_PERMISSIONS_CODE = 788;
+    public static final int CAMERA_INTENT_CODE = 998;
 
     public static Game[] initGameArray(Context context)
     {
@@ -50,6 +54,7 @@ public class MyConstants
     public static MenuItem[] initOthersItemArray(Context context)
     {
         MenuItem contacts = new MenuItem(context.getResources().getString(R.string.contact), R.drawable.contacts, new Intent(context, ContactActivity.class));
-        return new MenuItem[]{contacts};
+        MenuItem photo = new MenuItem(context.getResources().getString(R.string.photo), R.drawable.camera, new Intent(context, PhotoActivity.class));
+        return new MenuItem[]{contacts, photo};
     }
 }

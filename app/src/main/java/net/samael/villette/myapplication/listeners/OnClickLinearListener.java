@@ -2,8 +2,12 @@ package net.samael.villette.myapplication.listeners;
 
 import android.content.Context;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import net.samael.villette.myapplication.R;
 import net.samael.villette.myapplication.managers.Power4GameManager;
 
 /**
@@ -26,7 +30,14 @@ public class OnClickLinearListener implements View.OnClickListener
     @Override
     public void onClick(View view)
     {
-        gameManager.play(this.position);
+        ImageView[] imageViewsAnimation = gameManager.play(this.position);
+        TranslateAnimation animation = new TranslateAnimation(
+                imageViewsAnimation[0].getX(), imageViewsAnimation[1].getX(),
+                imageViewsAnimation[0].getY(), imageViewsAnimation[1].getY());
+        animation.setDuration(300);
+        animation.setFillAfter(false);
+        animation.setAnimationListener(new P4AnimationListener(context, imageViewsAnimation));
+        imageViewsAnimation[0].startAnimation(animation);
         gameManager.updateGrid();
     }
 }
