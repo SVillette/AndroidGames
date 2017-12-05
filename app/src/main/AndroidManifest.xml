@@ -26,9 +26,22 @@
         </activity>
         <activity android:name=".activities.games.ChessActivity">
         </activity>
-        <activity android:name=".activities.games.Power4Activity">
+        <activity
+            android:name=".activities.games.Power4Activity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".activities.games.HorsesActivity">
+        </activity>
+        <activity
+            android:name=".activities.contacts.ContactActivity"
+            android:label="@string/title_activity_contact"
+            android:parentActivityName=".activities.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.samael.villette.myapplication.activities.MenuActivity"/>
+        </activity>
+        <activity android:name=".activities.contacts.AddContactActivity">
         </activity>
     </application>
 

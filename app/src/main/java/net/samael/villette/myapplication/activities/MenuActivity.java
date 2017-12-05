@@ -4,23 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
 
 import net.samael.villette.myapplication.R;
 import net.samael.villette.myapplication.adapters.GameAdapter;
+import net.samael.villette.myapplication.adapters.OtherItemsAdapter;
 import net.samael.villette.myapplication.classes.MyConstants;
-import net.samael.villette.myapplication.listeners.OnItemClickMenuListener;
+import net.samael.villette.myapplication.listeners.OnGameItemClickMenuListener;
+import net.samael.villette.myapplication.listeners.OnOtherItemsClickMenuListener;
 import net.samael.villette.myapplication.models.Game;
+import net.samael.villette.myapplication.models.MenuItem;
 
 public class MenuActivity extends AppCompatActivity
 {
     public Context context = MenuActivity.this;
 
-    private GridView gridView;
+    private GridView gamesGridView;
+    private GridView otherItemsGridView;
 
     Game[] myGames;
+    MenuItem[] othersItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,16 +33,21 @@ public class MenuActivity extends AppCompatActivity
         setContentView(R.layout.menu_activity);
 
         myGames = MyConstants.initGameArray(context);
+        othersItems = MyConstants.initOthersItemArray(context);
 
-        initGridView();
+        initGridViews();
     }
 
-    protected void initGridView()
+    protected void initGridViews()
     {
-        gridView = (GridView) findViewById(R.id.menu_grid_view);
-        gridView.setAdapter(new GameAdapter(context, R.layout.menu_grid, myGames));
+        gamesGridView = (GridView) findViewById(R.id.games_menu_grid_view);
+        gamesGridView.setAdapter(new GameAdapter(context, R.layout.menu_grid, myGames));
 
-        gridView.setOnItemClickListener(new OnItemClickMenuListener(this, myGames));
+        otherItemsGridView = (GridView) findViewById(R.id.others_menu_grid_view);
+        otherItemsGridView.setAdapter(new OtherItemsAdapter(context, R.layout.menu_grid, othersItems));
+
+        gamesGridView.setOnItemClickListener(new OnGameItemClickMenuListener(this, myGames));
+        otherItemsGridView.setOnItemClickListener(new OnOtherItemsClickMenuListener(this, othersItems));
     }
 
     @Override

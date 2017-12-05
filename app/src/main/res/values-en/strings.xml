@@ -13,4 +13,25 @@
     <string name="horses">Horses</string>
     <string name="naval_war">Naval war</string>
     <string name="chess">Echecs</string>
+    <string name="ask_player_name">Player name</string>
+    <string name="validate">Validate</string>
+    <string name="cancel">Cancel</string>
+    <string name="color">Color</string>
+    <string name="name_empty_error">Player name is empty</string>
+    <string name="blue">Blue</string>
+    <string name="green">Green</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="pawns_description">pawn image</string>
+    <string name="player_turn">%1$s Turn</string>
+    <string name="empty_color">Empty</string>
+    <string name="games">Games</string>
+    <string name="contact">Contacts</string>
+    <string name="others">Others</string>
+    <string name="title_activity_contact">Contacts</string>
+    <string name="add_contact">Add a contact</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="phone_empty_error">Phone number is empty</string>
 </resources>

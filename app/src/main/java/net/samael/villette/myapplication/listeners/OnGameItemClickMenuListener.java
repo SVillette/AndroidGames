@@ -12,12 +12,12 @@ import net.samael.villette.myapplication.activities.games.BattleShipActivity;
 import net.samael.villette.myapplication.classes.MyConstants;
 import net.samael.villette.myapplication.models.Game;
 
-public class OnItemClickMenuListener implements AdapterView.OnItemClickListener
+public class OnGameItemClickMenuListener implements AdapterView.OnItemClickListener
 {
     private Activity activity;
     private Game[] games;
 
-    public OnItemClickMenuListener(Activity activity, Game[] games)
+    public OnGameItemClickMenuListener(Activity activity, Game[] games)
     {
         this.activity = activity;
         this.games = games;
@@ -28,6 +28,7 @@ public class OnItemClickMenuListener implements AdapterView.OnItemClickListener
     {
 //        Game game = ((Game) adapterView.getAdapter().getItem(i));
         Intent toGameActivity = games[i].getIntent();
+
         this.activity.startActivity(toGameActivity);
     }
 }

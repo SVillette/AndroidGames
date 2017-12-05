@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import net.samael.villette.myapplication.R;
+import net.samael.villette.myapplication.activities.contacts.ContactActivity;
 import net.samael.villette.myapplication.activities.games.BattleShipActivity;
 import net.samael.villette.myapplication.activities.games.CheckersActivity;
 import net.samael.villette.myapplication.activities.games.ChessActivity;
@@ -11,7 +12,8 @@ import net.samael.villette.myapplication.activities.games.HorsesActivity;
 import net.samael.villette.myapplication.activities.games.Power4Activity;
 import net.samael.villette.myapplication.activities.games.SudokuActivity;
 import net.samael.villette.myapplication.models.Game;
-import net.samael.villette.myapplication.models.Power4;
+import net.samael.villette.myapplication.models.MenuItem;
+import net.samael.villette.myapplication.models.Power4.Power4;
 
 
 public class MyConstants
@@ -28,6 +30,8 @@ public class MyConstants
     public final static int STATUS_OK = 1;
     public final static String BS_END_STRING = "bs_end_string";
 
+    public final static int P4_NB_PLAYERS = 2;
+
     public final static int P4_NB_COLUMNS = 7;
     public final static int P4_NB_LINES = 6;
 
@@ -41,5 +45,11 @@ public class MyConstants
         Game chess = new Game(context.getResources().getString(R.string.chess), R.drawable.chess, new Intent(context, ChessActivity.class));
 
         return new Game[]{checkers, sudoku, power4, horses, battleship, chess};
+    }
+
+    public static MenuItem[] initOthersItemArray(Context context)
+    {
+        MenuItem contacts = new MenuItem(context.getResources().getString(R.string.contact), R.drawable.contacts, new Intent(context, ContactActivity.class));
+        return new MenuItem[]{contacts};
     }
 }

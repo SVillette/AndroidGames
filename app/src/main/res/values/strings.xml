@@ -12,4 +12,26 @@
     <string name="horses">4 chevaux</string>
     <string name="naval_war">Bataille navale</string>
     <string name="chess">Echecs</string>
+    <string name="ask_player_name">Nom du joueur</string>
+    <string name="validate">Valider</string>
+    <string name="cancel">Annuler</string>
+    <string name="color">Couleur</string>
+    <string name="name_empty_error">Le nom est vide</string>
+    <string name="red">Rouge</string>
+    <string name="yellow">Jaune</string>
+    <string name="blue">Bleu</string>
+    <string name="green">Vert</string>
+    <string name="pawns_description">Image pion</string>
+    <string name="player_turn">Tour du joueur %1$s</string>
+    <string name="empty_color">Vide</string>
+    <string name="games">Jeux</string>
+    <string name="contact">Contacts</string>
+    <string name="others">Autres</string>
+    <string name="title_activity_contact">ContactActivity</string>
+    <string name="add_contact">Ajouter un contact</string>
+    <string name="name">Nom</string>
+    <string name="address">Adresse</string>
+    <string name="phone">Téléphone</string>
+    <string name="phone_empty_error">Le numéro est vide</string>
+    <string name="contact_added">Le contact a été ajouté</string>
 </resources>

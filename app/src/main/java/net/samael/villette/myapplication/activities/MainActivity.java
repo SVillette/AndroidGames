@@ -15,7 +15,6 @@ import net.samael.villette.myapplication.classes.MyConstants;
 public class MainActivity extends AppCompatActivity
 {
     private Context context = MainActivity.this;
-    private Intent toMenuActivity;
 
     private EditText editLogin, editPassword;
     private SharedPreferences sp;
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity
 
         editLogin.setText(sp.getString(MyConstants.KEY_LOGIN, ""));
         editPassword.setText(sp.getString(MyConstants.KEY_PASSWORD, ""));
+        goCheck((View) editLogin.getParent());
     }
 
     public void preferences()
@@ -55,11 +55,10 @@ public class MainActivity extends AppCompatActivity
         String login = editLogin.getText().toString();
         String password = editPassword.getText().toString();
 
-
         if (login.equals(sp.getString(MyConstants.KEY_LOGIN, ""))
                 && password.equals(sp.getString(MyConstants.KEY_PASSWORD, "")))
         {
-            toMenuActivity = new Intent(context, MenuActivity.class);
+            Intent toMenuActivity = new Intent(context, MenuActivity.class);
             startActivity(toMenuActivity);
         } else {
             Toast.makeText(this, R.string.non_authenticated, Toast.LENGTH_SHORT).show();
